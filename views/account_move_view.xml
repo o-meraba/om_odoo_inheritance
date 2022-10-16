@@ -8,6 +8,15 @@
           <xpath expr="//field[@name='invoice_date']" position="after">
             <field name="so_confirmed_user_id"/>
           </xpath>
+
+          <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='product_id']" position="before">
+            <field name="line_number"/>
+          </xpath>
+          
+          <xpath expr="//field[@name='invoice_line_ids']/form//field[@name='product_id']" position="before"> <!--  double / is for checking field in the place -->
+            <field name="line_number"/>
+          </xpath>
+
       </field>
     </record>
   </data>
